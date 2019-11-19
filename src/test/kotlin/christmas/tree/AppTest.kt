@@ -3,12 +3,15 @@
  */
 package christmas.tree
 
-import kotlin.test.Test
-import kotlin.test.assertNotNull
+import org.assertj.core.api.Assertions
+import org.junit.jupiter.api.Test
+
 
 class AppTest {
-    @Test fun testAppHasAGreeting() {
+    @Test
+    fun testAppHasAGreeting() {
         val classUnderTest = App()
-        assertNotNull(classUnderTest.greeting, "app should have a greeting")
+        Assertions.assertThat(classUnderTest.greeting).isNotNull()
+
     }
 }
