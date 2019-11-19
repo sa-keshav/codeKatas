@@ -15,8 +15,16 @@ class ChrismasTreeTest {
     }
 
     @Test
-    fun `input 2 makes to rows`() {
+    fun `input 2 makes two rows`() {
         val result: String = tree.draw(2)
         assertThat(result).isEqualTo(" X \nXXX")
     }
+
+    @Test
+    fun `input 3 makes three rows`() {
+        val result: String = tree.draw(3)
+        assertThat(result).isEqualTo("   X   \n XXX \nXXXXX")
+    }
+
+
 }
