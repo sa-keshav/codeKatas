@@ -3,15 +3,20 @@ package christmas.tree
 class ChristmasTree {
 
     fun draw(height: Int): String {
-        if (height == 3) {
-            return "   X   \n" +
-                    " XXX \n" +
-                    "XXXXX"
+        var result = ""
+
+        result = when (height) {
+            3 -> "  X\n" +
+                 " XXX\n" +
+                 "XXXXX"
+
+            2 -> " X\n" +
+                 "XXX"
+
+            else -> "X"
         }
-        if (height == 2) {
-            return " X \n" +
-                    "XXX"
-        }
-        return "X"
+        print(result)
+
+        return result
     }
 }
