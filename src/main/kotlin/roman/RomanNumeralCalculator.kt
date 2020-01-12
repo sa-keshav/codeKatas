@@ -71,7 +71,6 @@ class RomanNumeralCalculator {
                 return result
             }
             var str = roman.substring(i..i + 1)
-
             if (map2.containsKey(str)) {
                 result += map2[str] ?: 0
                 i++
