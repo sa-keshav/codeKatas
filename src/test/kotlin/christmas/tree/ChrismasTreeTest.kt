@@ -1,5 +1,6 @@
 package christmas.tree
 
+import ChrismasTree.ChristmasTree
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
@@ -25,10 +26,11 @@ class ChrismasTreeTest {
         val result: String = tree.newDraw(3, true)
         assertThat(result).isEqualTo(
                 "  *\n" +
-                "  X\n" +
-                " XXX\n" +
-                "XXXXX\n  I")
+                        "  X\n" +
+                        " XXX\n" +
+                        "XXXXX\n  I")
     }
+
     @Test
     fun `input 4 makes four rows`() {
         val result2: String = tree.newDraw(4, false)
@@ -36,11 +38,10 @@ class ChrismasTreeTest {
     }
 
     @Test
-    fun `input 3 made with new function`(){
+    fun `input 3 made with new function`() {
         val result2: String = tree.newDraw(4, true)
         assertThat(result2).isEqualTo("   *\n   X\n  XXX\n XXXXX\nXXXXXXX\n   I")
     }
-
 
 
 }
