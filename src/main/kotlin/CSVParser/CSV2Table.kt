@@ -11,7 +11,7 @@ class CSV2Table {
 
             result += toPrint(person)
             if (person.name == "Name") {
-                result += "-".repeat(52)
+                result += "-".repeat(50)
                 result += "+\n"
             }
 
@@ -36,7 +36,7 @@ class CSV2Table {
         var str = ""
         str += person.name
         var wortLength: Int = person.name.length
-        str += " ".repeat(14 - wortLength)
+        str += " ".repeat(13 - wortLength)
         str += "|"
         str += person.strasse
         wortLength = person.strasse.length
@@ -44,7 +44,7 @@ class CSV2Table {
         str += "|"
         str += person.ort
         wortLength = person.ort.length
-        str += " ".repeat(14 - wortLength)
+        str += " ".repeat(13 - wortLength)
         str += "|"
         str += person.alter
         wortLength = person.alter.length
